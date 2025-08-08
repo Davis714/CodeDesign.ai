@@ -13,7 +13,7 @@ const activitySchema = new mongoose.Schema({
 // Joi validation schema
 const validateActivity = Joi.object({
   member: Joi.string().hex().length(24).required(), // from req.body
-  type: Joi.string().valid("coding", "design", "meeting", "review", "testing").required(),
+  type: Joi.string().required(),
   hours: Joi.number().positive().required(),
   date: Joi.date().required(),
   tags: Joi.array().items(Joi.string()).required()

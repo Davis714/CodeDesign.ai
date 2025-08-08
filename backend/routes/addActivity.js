@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const Joi = require("joi");
 const Member = require("../models/Member");
 const {Activity ,validateActivity} = require("../models/Activity");
   router.post("/activity", async (req, res) => {
@@ -22,7 +21,7 @@ const {Activity ,validateActivity} = require("../models/Activity");
   
       await newActivity.save();
   
-      res.status(201).json({ message: "Activity added successfully", activity: newActivity });
+      res.status(201).json({activity: newActivity });
     } catch (err) {
       console.error("Error adding activity:", err);
       res.status(500).json({ error: "Server Error" });

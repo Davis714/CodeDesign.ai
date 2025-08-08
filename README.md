@@ -25,7 +25,7 @@ Before running this project, make sure you have:
 1. **Clone the repository**
    ```bash
    git clone https://github.com/Davis714/CodeDesign.ai.git
-   cd CodeDesign.ai
+   cd backend
    ```
 
 2. **Install dependencies**
@@ -41,7 +41,7 @@ Before running this project, make sure you have:
 
 4. **Run the server**
    ```bash
-   node index.js
+   node app.js
    ```
    The server will start at:
    ```
@@ -80,7 +80,7 @@ POST /activity
 **Request Body (JSON):**
 ```json
 {
-  "member": "64e6f1e8b1c5e4a123456789",
+  "member": "6895823408869e73b6a3e7dc",
   "type": "Development",
   "hours": 5,
   "date": "2025-08-01",
@@ -94,12 +94,92 @@ POST /activity
 ```
 GET /report/company/:companyId?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD
 ```
-Returns:
-- Teams in the company
-- Total hours worked
-- Activity breakdown
-- Unique tags
-- Global activity summary
+Returns:(Sample)
+```
+{
+    "companyId": "6895823408869e73b6a3e7d7",
+    "companyName": "Alpha Inc",
+    "teams": [
+        {
+            "teamId": "6895823408869e73b6a3e7da",
+            "teamName": "Engineering",
+            "totalMembers": 2,
+            "totalHours": 27,
+            "activityBreakdown": [
+                {
+                    "type": "coding",
+                    "totalHours": 11
+                },
+                {
+                    "type": "Development",
+                    "totalHours": 10
+                },
+                {
+                    "type": "meeting",
+                    "totalHours": 5
+                },
+                {
+                    "type": "review",
+                    "totalHours": 1
+                }
+            ],
+            "uniqueTags": [
+                "feature",
+                "frontend",
+                "planning",
+                "code",
+                "bugfix",
+                "sync",
+                "backend",
+                "nodejs"
+            ]
+        },
+        {
+            "teamId": "6895823408869e73b6a3e7e7",
+            "teamName": "Design",
+            "totalMembers": 1,
+            "totalHours": 6,
+            "activityBreakdown": [
+                {
+                    "type": "design",
+                    "totalHours": 4
+                },
+                {
+                    "type": "meeting",
+                    "totalHours": 2
+                }
+            ],
+            "uniqueTags": [
+                "ui",
+                "figma",
+                "handoff"
+            ]
+        }
+    ],
+    "activitySummaryByType": {
+        "coding": {
+            "totalHours": 11,
+            "members": 2
+        },
+        "meeting": {
+            "totalHours": 7,
+            "members": 3
+        },
+        "review": {
+            "totalHours": 1,
+            "members": 1
+        },
+        "Development": {
+            "totalHours": 10,
+            "members": 1
+        },
+        "design": {
+            "totalHours": 4,
+            "members": 1
+        }
+    }
+}
+---
 
 ---
 
@@ -142,7 +222,7 @@ project/
 ├── models/              # Mongoose models
 ├── routes/              # Express route handlers
 ├── seed.js               # Script to populate the database with sample data
-├── index.js              # Entry point
+├── app.js              # Entry point
 └── package.json
 ```
 
@@ -153,7 +233,7 @@ project/
   ```
   mongodb://localhost:27017/companydb
   ```
-  Update this in `index.js` or `seed.js` if you want to connect to another database.
+  Update this in `app.js` or `seed.js` if you want to connect to another database.
 - Use tools like [Postman](https://www.postman.com/) or [curl](https://curl.se/) to test the endpoints.
 
 ---

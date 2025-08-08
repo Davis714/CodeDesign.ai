@@ -24,7 +24,6 @@ router.get("/overview", async (req, res) => {
       if (endDate && actDate > new Date(endDate)) return false;
       return true;
     });
-    console.log(startDate);
     const totalHours = filteredActivities.reduce((sum, act) => sum + act.hours, 0);
 
     for(var act of filteredActivities){
