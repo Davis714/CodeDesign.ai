@@ -56,6 +56,7 @@ This project includes a `seed.js` script to populate MongoDB with sample data fo
 **Steps to seed the database:**
 1. Make sure MongoDB is running.
 2. Run the seeding script:
+
    ```bash
    node seed.js
    ```
