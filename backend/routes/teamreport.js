@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-const mongoose = require("mongoose");
 const { Company } = require("../models/Company");
 const Team = require("../models/Team");
 const Member = require("../models/Member");
