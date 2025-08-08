@@ -179,28 +179,53 @@ Returns:(Sample)
         }
     }
 }
----
-
----
-
-### **Team Report**
 ```
-GET /report/team/:teamId?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD
-```
-Returns:
-- Members in the team
-- Activity details for each member
-- Hours summary
 
 ---
-
 ### **Member Report**
 ```
 GET /report/member/:memberId?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD
 ```
-Returns:
-- Daily breakdown of activities
-- Total hours worked
+Returns(Sample):
+```
+{
+    "memberId": "6895823408869e73b6a3e7dc",
+    "memberName": "Alice",
+    "totalHours": 18,
+    "dailyBreakDown": [
+        {
+            "date": "2024-03-01",
+            "activities": [
+                "coding"
+            ],
+            "hours": 5
+        },
+        {
+            "date": "2024-03-02",
+            "activities": [
+                "meeting"
+            ],
+            "hours": 2
+        },
+        {
+            "date": "2024-03-03",
+            "activities": [
+                "review"
+            ],
+            "hours": 1
+        },
+        {
+            "date": "2025-08-01",
+            "activities": [
+                "Development",
+                "Development"
+            ],
+            "hours": 10
+        }
+    ]
+}
+```
+
 
 ---
 
@@ -208,10 +233,46 @@ Returns:
 ```
 GET /report/overview?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD
 ```
-Returns:
-- Total companies, teams, members, activities
-- Total hours
-- Top activity types
+Returns(Sample):
+```
+{
+    "totalCompanies": 2,
+    "totalTeams": 3,
+    "totalMembers": 5,
+    "totalActivities": 13,
+    "totalHours": 44,
+    "topActivityTypes": [
+        {
+            "type": "coding",
+            "totalHours": 11
+        },
+        {
+            "type": "Development",
+            "totalHours": 10
+        },
+        {
+            "type": "meeting",
+            "totalHours": 9
+        },
+        {
+            "type": "content",
+            "totalHours": 7
+        },
+        {
+            "type": "design",
+            "totalHours": 4
+        },
+        {
+            "type": "seo",
+            "totalHours": 2
+        },
+        {
+            "type": "review",
+            "totalHours": 1
+        }
+    ]
+}
+```
 
 ---
 
@@ -238,6 +299,4 @@ project/
 
 ---
 
-## License
-This project is open-source and available under the [MIT License](LICENSE).
 
