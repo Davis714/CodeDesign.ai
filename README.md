@@ -67,8 +67,11 @@ This project includes a `seed.js` script to populate MongoDB with sample data fo
      - 2 Teams
      - 3 Members
      - 4 Activities with various types, hours, and dates
-
 After running the seed, you can directly test the API endpoints.
+4. Postman working can be viewed in 
+    ```
+    Postman Working.mp4
+    ```
 
 ---
 
@@ -276,7 +279,7 @@ POST /activity
 
 ## Project Structure
 ```
-project/
+backend/
 │
 ├── models/              # Mongoose models
 ├── data/  
@@ -297,5 +300,11 @@ project/
 - Use tools like [Postman](https://www.postman.com/) or [curl](https://curl.se/) to test the endpoints.
 
 ---
+# Frontend
+To view frontend you can go to 
+```
+cd frontend
+index.html
+```
 
 
