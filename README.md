@@ -72,25 +72,102 @@ After running the seed, you can directly test the API endpoints.
 ---
 
 ## API Endpoints
-
-### **Add an Activity**
+---
+### **Returns a daily activity log for a member**
 ```
-POST /activity
+GET /report/member/:memberId?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD
 ```
-**Request Body (JSON):**
-```json
+Returns(Sample):
+```
 {
-  "member": "6895823408869e73b6a3e7dc",
-  "type": "Development",
-  "hours": 5,
-  "date": "2025-08-01",
-  "tags": ["backend", "nodejs"]
+    "memberId": "6895823408869e73b6a3e7dc",
+    "memberName": "Alice",
+    "totalHours": 18,
+    "dailyBreakDown": [
+        {
+            "date": "2024-03-01",
+            "activities": [
+                "coding"
+            ],
+            "hours": 5
+        },
+        {
+            "date": "2024-03-02",
+            "activities": [
+                "meeting"
+            ],
+            "hours": 2
+        },
+        {
+            "date": "2024-03-03",
+            "activities": [
+                "review"
+            ],
+            "hours": 1
+        },
+        {
+            "date": "2025-08-01",
+            "activities": [
+                "Development",
+                "Development"
+            ],
+            "hours": 10
+        }
+    ]
+}
+```
+
+
+---
+
+### **Returns a summary report across all companies**
+```
+GET /report/overview?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD
+```
+Returns(Sample):
+```
+{
+    "totalCompanies": 2,
+    "totalTeams": 3,
+    "totalMembers": 5,
+    "totalActivities": 13,
+    "totalHours": 44,
+    "topActivityTypes": [
+        {
+            "type": "coding",
+            "totalHours": 11
+        },
+        {
+            "type": "Development",
+            "totalHours": 10
+        },
+        {
+            "type": "meeting",
+            "totalHours": 9
+        },
+        {
+            "type": "content",
+            "totalHours": 7
+        },
+        {
+            "type": "design",
+            "totalHours": 4
+        },
+        {
+            "type": "seo",
+            "totalHours": 2
+        },
+        {
+            "type": "review",
+            "totalHours": 1
+        }
+    ]
 }
 ```
 
 ---
 
-### **Company Report**
+### **Returns analytics grouped by team**
 ```
 GET /report/company/:companyId?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD
 ```
@@ -180,100 +257,20 @@ Returns:(Sample)
     }
 }
 ```
-
----
-### **Member Report**
+### **Add an Activity**
 ```
-GET /report/member/:memberId?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD
+POST /activity
 ```
-Returns(Sample):
-```
+**Request Body (JSON):**
+```json
 {
-    "memberId": "6895823408869e73b6a3e7dc",
-    "memberName": "Alice",
-    "totalHours": 18,
-    "dailyBreakDown": [
-        {
-            "date": "2024-03-01",
-            "activities": [
-                "coding"
-            ],
-            "hours": 5
-        },
-        {
-            "date": "2024-03-02",
-            "activities": [
-                "meeting"
-            ],
-            "hours": 2
-        },
-        {
-            "date": "2024-03-03",
-            "activities": [
-                "review"
-            ],
-            "hours": 1
-        },
-        {
-            "date": "2025-08-01",
-            "activities": [
-                "Development",
-                "Development"
-            ],
-            "hours": 10
-        }
-    ]
+  "member": "6895823408869e73b6a3e7dc",
+  "type": "Development",
+  "hours": 5,
+  "date": "2025-08-01",
+  "tags": ["backend", "nodejs"]
 }
 ```
-
-
----
-
-### **Overview Report**
-```
-GET /report/overview?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD
-```
-Returns(Sample):
-```
-{
-    "totalCompanies": 2,
-    "totalTeams": 3,
-    "totalMembers": 5,
-    "totalActivities": 13,
-    "totalHours": 44,
-    "topActivityTypes": [
-        {
-            "type": "coding",
-            "totalHours": 11
-        },
-        {
-            "type": "Development",
-            "totalHours": 10
-        },
-        {
-            "type": "meeting",
-            "totalHours": 9
-        },
-        {
-            "type": "content",
-            "totalHours": 7
-        },
-        {
-            "type": "design",
-            "totalHours": 4
-        },
-        {
-            "type": "seo",
-            "totalHours": 2
-        },
-        {
-            "type": "review",
-            "totalHours": 1
-        }
-    ]
-}
-```
-
 ---
 
 ## Project Structure
