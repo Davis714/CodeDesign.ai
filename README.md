@@ -25,7 +25,7 @@ Before running this project, make sure you have:
 1. **Clone the repository**
    ```bash
    git clone https://github.com/Davis714/CodeDesign.ai.git
-   cd backend
+   cd CodeDesign.ai/backend
    ```
 
 2. **Install dependencies**
@@ -41,7 +41,7 @@ Before running this project, make sure you have:
 
 4. **Run the server**
    ```bash
-   node app.js
+   nodemon app.js
    ```
    The server will start at:
    ```
