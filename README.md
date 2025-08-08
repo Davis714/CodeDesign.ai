@@ -5,7 +5,8 @@ A Node.js + Express + MongoDB backend for managing company activities, teams, me
 
 ## Features
 - Add activity records for members
-- Implemented Bonus Activity
+- Generate company-level, team-level, and member-level reports
+- Overview report with total counts and top activity types
 - Date range filtering via query params (`?startDate=YYYY-MM-DD&endDate=YYYY-MM-DD`)
 - Built with **Express**, **MongoDB** (Mongoose), and **Joi** for validation
 
