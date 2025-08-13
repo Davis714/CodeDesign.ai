@@ -44,7 +44,7 @@ Before running this project, make sure you have:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Davis714/CodeDesign.ai.git
+   git clone https://github.com/Davis714/CodeDesign.ai.git #No need to if already cloned
    cd CodeDesign.ai/backend
    ```
 
