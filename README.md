@@ -1,4 +1,22 @@
 # CodeDesign.ai
+# Frontend
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/Davis714/CodeDesign.ai.git
+   cd CodeDesign.ai/backend
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+3. **Run the server**
+   ```bash
+   nodemon app.js
+   ```
+   The server will start at:
+   ```
+---
 # Company Activity Reporting API
 
 A Node.js + Express + MongoDB backend for managing company activities, teams, members, and generating detailed activity reports with date filtering.
