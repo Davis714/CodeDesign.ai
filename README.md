@@ -12,7 +12,7 @@
    ```
 3. **Run the server**
    ```bash
-   nodemon app.js
+   npm start
    ```
    The server will start at:
    ```
