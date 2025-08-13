@@ -29,7 +29,7 @@ const CustomCheckbox = ({ checked = false, label, onChange }) => {
         />
         <img src={isChecked ? Checkbox : UnCheckBox} alt={`${label} checkbox`} />
       </label>
-      <span className="checkbox-label">{label}</span>
+      <span className="checkbox-label" onClick={toggleCheckBox}>{label}</span>
     </div>
   );
 };
