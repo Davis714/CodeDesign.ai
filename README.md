@@ -3,7 +3,7 @@
 1. **Clone the repository**
    ```bash
    git clone https://github.com/Davis714/CodeDesign.ai.git
-   cd CodeDesign.ai/backend
+   cd CodeDesign.ai/frontend
    ```
 
 2. **Install dependencies**
