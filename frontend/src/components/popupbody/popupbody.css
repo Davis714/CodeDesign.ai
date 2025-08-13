@@ -1,0 +1,19 @@
+.popup-body {
+    border-radius: 12px;
+    padding: 8px 8px 16px 8px;
+    margin: 0px 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .tab-container {
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 8.91px;
+    background: #2a2a2a;
+    padding: 2px;
+  }
+  
+  .checkbox-list {
+    margin-top: 8px;
+  }
+  

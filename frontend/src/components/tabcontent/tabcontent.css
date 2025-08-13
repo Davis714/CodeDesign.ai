@@ -1,0 +1,10 @@
+.tab-content {
+    display: none;
+    padding: 8px;
+  }
+  
+  .tab-content.active {
+    display: block;
+    padding-left: 8px;
+  }
+  
