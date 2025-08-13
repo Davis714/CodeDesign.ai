@@ -315,6 +315,7 @@ backend/
 
 ## Notes
 - This app uses a **local MongoDB instance** by default:
+
   ```
   mongodb://localhost:27017/companydb
   ```
