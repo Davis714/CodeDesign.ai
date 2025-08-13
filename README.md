@@ -322,11 +322,6 @@ backend/
 - Use tools like [Postman](https://www.postman.com/) or [curl](https://curl.se/) to test the endpoints.
 
 ---
-# Frontend
-To view frontend you can go to 
-```
-cd frontend
-index.html
-```
+
 
 
