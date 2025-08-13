@@ -67,7 +67,7 @@ Before running this project, make sure you have:
    ```
    The server will start at:
    ```
-   http://localhost:3000
+   http://localhost:5000
    ```
 
 ---
