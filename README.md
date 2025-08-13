@@ -2,7 +2,6 @@
 # **Clone the repository**
    ```bash
    git clone https://github.com/Davis714/CodeDesign.ai.git
-   cd CodeDesign.ai/frontend
    ```
 # Frontend
 1. **For the frontend part**
