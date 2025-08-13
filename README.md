@@ -1,8 +1,12 @@
 # CodeDesign.ai
-# Frontend
-1. **Clone the repository**
+# **Clone the repository**
    ```bash
    git clone https://github.com/Davis714/CodeDesign.ai.git
+   cd CodeDesign.ai/frontend
+   ```
+# Frontend
+1. **For the frontend part**
+   ```bash
    cd CodeDesign.ai/frontend
    ```
 
@@ -42,9 +46,8 @@ Before running this project, make sure you have:
 
 ## Installation
 
-1. **Clone the repository**
+1. **For the backend part**
    ```bash
-   git clone https://github.com/Davis714/CodeDesign.ai.git #No need to if already cloned
    cd CodeDesign.ai/backend
    ```
 
